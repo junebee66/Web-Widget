@@ -71,10 +71,20 @@ body {
 
 .title {
   position: absolute;
-  top: 45px;
+  top: 65px;
   left: 0;
   width: 100%;
   font-size: 2em;
+  font-weight: normal;
+  line-height: 1;
+}
+
+.by {
+  position: absolute;
+  top: 105px;
+  left: 0;
+  width: 100%;
+  font-size: 0.9em;
   font-weight: normal;
   line-height: 1;
 }
@@ -314,12 +324,12 @@ body {
 
 @-webkit-keyframes nextFlip1 {
   0% {
-    background-image: url("https://picsum.photos/420/300?random=1");
+    background-image: url("https://github.com/junebee66/Web-Widget/blob/main/turning-pages-with-css/sources/ComicBook0.jpg");
     background-position: -178px -2px;
     transform: rotateY(0deg);
   }
   10% {
-    background-image: url("https://picsum.photos/420/300?random=2");
+    background-image: url("https://github.com/junebee66/Web-Widget/blob/main/turning-pages-with-css/sources/ComicBook0.jpg");
     background-position: -210px -2px;
     transform: rotateY(180deg);
   }
