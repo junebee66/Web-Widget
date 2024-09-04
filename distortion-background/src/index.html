@@ -1,0 +1,325 @@
+<!-- <html data-wf-domain="pixel-distortion-threejs.webflow.io" data-wf-page="63ef5711136f38cbf62052f2" data-wf-site="63ef5711136f38780c2052f0"> --><!DOCTYPE html><!-- This site was created in Webflow. https://webflow.com --><!-- Last Published: Fri Aug 23 2024 09:25:34 GMT+0000 (Coordinated Universal Time) --> -->
+
+<!-- <html data-wf-domain="pixel-distortion-threejs.webflow.io" data-wf-page="63ef5711136f38cbf62052f2" data-wf-site="63ef5711136f38780c2052f0"> -->
+  
+  <head><meta charset="utf-8"/><title>Pixel Distortion (ThreeJS)</title><meta content="width=device-width, initial-scale=1" name="viewport"/><meta content="Webflow" name="generator"/><link href="https://cdn.prod.website-files.com/63ef5711136f38780c2052f0/css/pixel-distortion-threejs.webflow.41c75eeae.css" rel="stylesheet" type="text/css"/><script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
+  
+  <link href="https://cdn.prod.website-files.com/img/favicon.ico" rel="shortcut icon" type="image/x-icon"/><link href="https://cdn.prod.website-files.com/img/webclip.png" rel="apple-touch-icon"/><style>
+#canvasContainer img {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.text-center{
+	pointer-events: none;
+}
+</style></head><body><main class="main"><div class="w-embed"><style>
+#canvasContainer {
+  position: fixed;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+#canvasContainer img {
+  position: absolute;
+}
+.outline{
+	-webkit-text-stroke: 1px white;
+  
+  color: transparent;
+}
+</style></div><div id="canvasContainer" data-grid="32" data-mouse=".13" data-strength=".8" data-relaxation=".7" data-aspectRatio="" class="canvascontainer"><img src="https://cdn.prod.website-files.com/63ef5711136f38780c2052f0/640847d01004c57aee2dc416_pexels-rostislav-uzunov-5011647.jpg" loading="lazy" srcset="https://cdn.prod.website-files.com/63ef5711136f38780c2052f0/640847d01004c57aee2dc416_pexels-rostislav-uzunov-5011647-p-500.jpg 500w, https://cdn.prod.website-files.com/63ef5711136f38780c2052f0/640847d01004c57aee2dc416_pexels-rostislav-uzunov-5011647-p-800.jpg 800w, https://cdn.prod.website-files.com/63ef5711136f38780c2052f0/640847d01004c57aee2dc416_pexels-rostislav-uzunov-5011647-p-1080.jpg 1080w, https://cdn.prod.website-files.com/63ef5711136f38780c2052f0/640847d01004c57aee2dc416_pexels-rostislav-uzunov-5011647-p-1600.jpg 1600w, https://cdn.prod.website-files.com/63ef5711136f38780c2052f0/640847d01004c57aee2dc416_pexels-rostislav-uzunov-5011647-p-2000.jpg 2000w, https://cdn.prod.website-files.com/63ef5711136f38780c2052f0/640847d01004c57aee2dc416_pexels-rostislav-uzunov-5011647-p-2600.jpg 2600w, https://cdn.prod.website-files.com/63ef5711136f38780c2052f0/640847d01004c57aee2dc416_pexels-rostislav-uzunov-5011647-p-3200.jpg 3200w, https://cdn.prod.website-files.com/63ef5711136f38780c2052f0/640847d01004c57aee2dc416_pexels-rostislav-uzunov-5011647.jpg 3840w" sizes="100vw" alt="" class="img"/></div><div class="text-center"><div class="text-group"><h1 data-w-id="3d8cdfa6-eec3-32e7-e2d6-fc513dbbab79" style="-webkit-transform:translate3d(-130%, 50%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(-130%, 50%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(-130%, 50%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(-130%, 50%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="text original">DISTORTION</h1><h1 data-w-id="39088b6f-9884-d610-3551-7d774812b7f6" style="-webkit-transform:translate3d(40%, -120%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(40%, -120%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(40%, -120%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(40%, -120%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="text outline">DISTORTION</h1><h1 data-w-id="299e2131-9dc1-e325-67e9-04d220ca1d55" style="-webkit-transform:translate3d(110%, 20%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(110%, 20%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(110%, 20%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(110%, 20%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="text outline _2">DISTORTION</h1></div></div></main><script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=63ef5711136f38780c2052f0" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script><script src="https://cdn.prod.website-files.com/63ef5711136f38780c2052f0/js/webflow.c77b0a1c5.js" type="text/javascript"></script><script src="https://cdn.jsdelivr.net/npm/three-js@79.0.0/three.min.js"></script>
+<script type="module">
+var vertex = `
+varying vec2 vUv;
+varying vec3 vPosition;
+uniform vec2 pixels;
+float PI = 3.141592653589793238;
+void main() {
+  vUv = uv;
+  gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+}`;
+
+var fragment = `
+uniform float progress;
+uniform sampler2D uDataTexture;
+uniform sampler2D uTexture;
+
+
+uniform vec4 resolution;
+varying vec2 vUv;
+varying vec3 vPosition;
+float PI = 3.141592653589793238;
+void main()	{
+	vec2 newUV = (vUv - vec2(0.5)) * resolution.zw + vec2(0.5);
+	vec4 color = texture2D(uTexture,newUV);
+	vec4 offset = texture2D(uDataTexture,vUv);
+	gl_FragColor = vec4(vUv,0.0,1.);
+	gl_FragColor = vec4(offset.r,0.,0.,1.);
+	gl_FragColor = color;
+	gl_FragColor = texture2D(uTexture,newUV - 0.01*offset.rg);
+	// gl_FragColor = offset;
+
+}`;
+
+function clamp(number, min, max) {
+  return Math.max(min, Math.min(number, max));
+}
+
+class Sketch {
+  constructor(options) {
+    this.scene = new THREE.Scene();
+
+    this.container = options.dom;
+    this.img = this.container.querySelector("img");
+    this.width = this.container.offsetWidth;
+    this.height = this.container.offsetHeight;
+    this.renderer = new THREE.WebGLRenderer();
+    this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    this.renderer.setSize(this.width, this.height);
+    this.renderer.setClearColor(0xeeeeee, 1);
+    this.renderer.physicallyCorrectLights = true;
+    this.renderer.outputEncoding = THREE.sRGBEncoding;
+
+    this.container.appendChild(this.renderer.domElement);
+
+    this.camera = new THREE.PerspectiveCamera(
+      70,
+      window.innerWidth / window.innerHeight,
+      0.1,
+      100
+    );
+
+    var frustumSize = 1;
+    var aspect = window.innerWidth / window.innerHeight;
+    this.camera = new THREE.OrthographicCamera(
+      frustumSize / -2,
+      frustumSize / 2,
+      frustumSize / 2,
+      frustumSize / -2,
+      -1000,
+      1000
+    );
+    this.camera.position.set(0, 0, 2);
+
+    this.time = 0;
+
+    this.mouse = {
+      x: 0,
+      y: 0,
+      prevX: 0,
+      prevY: 0,
+      vX: 0,
+      vY: 0
+    };
+
+    this.isPlaying = true;
+    this.settings();
+    this.addObjects();
+    this.resize();
+    this.render();
+    this.setupResize();
+
+    this.mouseEvents();
+  }
+
+  getValue(val) {
+    return parseFloat(this.container.getAttribute("data-" + val));
+  }
+
+  mouseEvents() {
+    window.addEventListener("mousemove", (e) => {
+      this.mouse.x = e.clientX / this.width;
+      this.mouse.y = e.clientY / this.height;
+
+      // console.log(this.mouse.x,this.mouse.y)
+
+      this.mouse.vX = this.mouse.x - this.mouse.prevX;
+      this.mouse.vY = this.mouse.y - this.mouse.prevY;
+
+      this.mouse.prevX = this.mouse.x;
+      this.mouse.prevY = this.mouse.y;
+
+      // console.log(this.mouse.vX,'vx')
+    });
+  }
+
+  settings() {
+    let that = this;
+    this.settings = {
+      grid: this.getValue("grid") || 34, //generate how many grid
+      mouse: this.getValue("mouse") || 0.25, //mouse radius affecting the distortion
+      strength: this.getValue("strength") || 1, //higher = more parallax and distorted.
+      relaxation: this.getValue("relaxation") || 0.9, //lower = faster pixel re-sorting
+      aspectRatio: this.getValue("aspectRatio") || 1.77 //change aspectRatio according to your image size.
+    };
+  }
+
+  setupResize() {
+    window.addEventListener("resize", this.resize.bind(this));
+  }
+
+  resize() {
+    this.width = this.container.offsetWidth;
+    this.height = this.container.offsetHeight;
+    this.renderer.setSize(this.width, this.height);
+    this.camera.aspect = this.width / this.height;
+    
+    // image cover
+    //image Aspect depends on your image, change accordingly
+    this.imageAspect = 1 / this.settings.aspectRatio;
+    
+    let a1;
+    let a2;
+    if (this.height / this.width > this.imageAspect) {
+      a1 = (this.width / this.height) * this.imageAspect;
+      a2 = 1;
+    } else {
+      a1 = 1;
+      a2 = this.height / this.width / this.imageAspect;
+    }
+
+    this.material.uniforms.resolution.value.x = this.width;
+    this.material.uniforms.resolution.value.y = this.height;
+    this.material.uniforms.resolution.value.z = a1;
+    this.material.uniforms.resolution.value.w = a2;
+
+    this.camera.updateProjectionMatrix();
+    this.regenerateGrid();
+  }
+
+  regenerateGrid() {
+    this.size = this.settings.grid;
+
+    const width = this.size;
+    const height = this.size;
+
+    const size = width * height;
+    const data = new Float32Array(3 * size);
+    const color = new THREE.Color(0xffffff);
+
+    const r = Math.floor(color.r * 255);
+    const g = Math.floor(color.g * 255);
+    const b = Math.floor(color.b * 255);
+
+    for (let i = 0; i < size; i++) {
+      let r = Math.random() * 255 - 125;
+      let r1 = Math.random() * 255 - 125;
+
+      const stride = i * 3;
+
+      data[stride] = r;
+      data[stride + 1] = r1;
+      data[stride + 2] = r;
+    }
+
+    // used the buffer to create a DataTexture
+
+    this.texture = new THREE.DataTexture(
+      data,
+      width,
+      height,
+      THREE.RGBFormat,
+      THREE.FloatType
+    );
+
+    this.texture.magFilter = this.texture.minFilter = THREE.NearestFilter;
+
+    if (this.material) {
+      this.material.uniforms.uDataTexture.value = this.texture;
+      this.material.uniforms.uDataTexture.value.needsUpdate = true;
+    }
+  }
+
+  addObjects() {
+    this.regenerateGrid();
+    let texture = new THREE.TextureLoader().load(this.img.src, function(){
+    	texture.minFilter = THREE.LinearFilter;
+      texture.generateMipmaps = false;
+    	var tex = texture.clone();
+    	tex.needsUpdate = true;
+    });
+    this.material = new THREE.ShaderMaterial({
+      extensions: {
+        derivatives: "#extension GL_OES_standard_derivatives : enable"
+      },
+      side: THREE.DoubleSide,
+      uniforms: {
+        time: {
+          value: 0
+        },
+        resolution: {
+          value: new THREE.Vector4()
+        },
+        uTexture: {
+          value: texture
+        },
+        uDataTexture: {
+          value: this.texture
+        }
+      },
+      vertexShader: vertex,
+      fragmentShader: fragment
+    });
+    this.geometry = new THREE.PlaneGeometry(1, 1, 1, 1);
+
+    this.plane = new THREE.Mesh(this.geometry, this.material);
+    this.scene.add(this.plane);
+    
+    this.resize();
+  }
+
+  updateDataTexture() {
+    let data = this.texture.image.data;
+    for (let i = 0; i < data.length; i += 3) {
+      data[i] *= this.settings.relaxation;
+      data[i + 1] *= this.settings.relaxation;
+    }
+
+    let gridMouseX = this.size * this.mouse.x;
+    let gridMouseY = this.size * (1 - this.mouse.y);
+    let maxDist = this.size * this.settings.mouse;
+    let aspect = this.height / this.width;
+
+    for (let i = 0; i < this.size; i++) {
+      for (let j = 0; j < this.size; j++) {
+        let distance = (gridMouseX - i) ** 2 / aspect + (gridMouseY - j) ** 2;
+        let maxDistSq = maxDist ** 2;
+
+        if (distance < maxDistSq) {
+          let index = 3 * (i + this.size * j);
+
+          let power = maxDist / Math.sqrt(distance);
+          power = clamp(power, 0, 10);
+          // if(distance <this.size/32) power = 1;
+          // power = 1;
+
+          data[index] += this.settings.strength * 100 * this.mouse.vX * power;
+          data[index + 1] -=
+            this.settings.strength * 100 * this.mouse.vY * power;
+        }
+      }
+    }
+
+    this.mouse.vX *= 0.9;
+    this.mouse.vY *= 0.9;
+    this.texture.needsUpdate = true;
+  }
+
+  render() {
+    if (!this.isPlaying) return;
+    this.time += 0.05;
+    this.updateDataTexture();
+    this.material.uniforms.time.value = this.time;
+    requestAnimationFrame(this.render.bind(this));
+    this.renderer.render(this.scene, this.camera);
+  }
+}
+
+new Sketch({
+  dom: document.getElementById("canvasContainer")
+});
+</script></body></html>
