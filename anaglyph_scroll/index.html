@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./public/branding.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Threejs Shaders RGB Effect</title>
+  </head>
+  <body>
+    <main>
+      <!-- <p>THREEJS SHADERS</p> -->
+      <div class="scrollable">
+        <div class="container">
+          <div class="image-container">
+            <h1>ABOUT</h1>
+            <img src="../anaglyph_scroll/public/images/0.jpg" alt="">
+          </div>
+          <div class="image-container">
+            <h1>WEB</h1>
+            <img src="./public/images/1.jpg" alt="">
+          </div>
+          <div class="image-container">
+            <h1>VIDEO STREAMING</h1>
+            <img src="./public/images/2.jpg" alt="">
+          </div>
+          <div class="image-container">
+            <h1>ENVIRONMENT</h1>
+            <img src="./public/images/3.jpg" alt="">
+          </div>
+          <div class="image-container">
+            <h1>3D MODEL</h1>
+            <img src="./public/images/4.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </main>
+    
+    <script type="module" src="./shaders/vertextShader.glsl"></script>
+    <script type="module" src="./shaders/fragmentShader.glsl"></script>
+    
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
