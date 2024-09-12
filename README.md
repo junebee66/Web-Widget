@@ -1,9 +1,10 @@
 # Web Widget
 This repository consists of all small to mid size website related code experiments I design & code.
 
-## 🔵🔴 Anaglyph Scroll | Code Experiment | 2023
+## 🔵🔴 Anaglyph Scroll | Code Experiment | May 2023
 
-![Alt text](URL or path to image)
+![Alt text](https://github.com/junebee66/Web-Widget/blob/main/anaglyph_scroll/scroll_w_anaglyoh.gif)
+</br>
 ⚠️ **Please put on anaglyph glasses to see the 3D effect**
 
 ⭐️ **Images become 3D when scrolling**
