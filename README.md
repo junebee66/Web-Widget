@@ -9,7 +9,7 @@ This repository consists of all small to mid size website related code experimen
 
 ⭐️ **Images become 3D when scrolling**
 
-🔗 [Github Code](https://github.com/junebee66?tab=repositories)
+🔗 [Live Demo](https://junebee66.github.io/Web-Widget/anaglyph_scroll/index.html)
 
 ### Overview
 
